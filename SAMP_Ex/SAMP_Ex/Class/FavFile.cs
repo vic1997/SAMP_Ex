@@ -34,19 +34,8 @@ namespace SAMP_Ex
             _FavFile.Save(_filepath);
         }
 
-        public static void UpdateFavList()
-        {
-            foreach(Server serv in FavList)
-            {
-                serv.TotalUpdate();
-            }
-        }
-
         public static bool AddServer(Server server, string nickname)
         {
-            if (!server.IsValid)
-            { return false; }
-
             try
             {
                 var servip = _FavFile.Root.Descendants("server").Where(x => x.Element("ip").Value == (server.Ip.ToString() + ":" + server.Port)).FirstOrDefault();
@@ -73,16 +62,14 @@ namespace SAMP_Ex
         }
 
         public static bool DeleteServer(Server server)
-        {
-            if (!server.IsValid)
-                return false;
-              
+        {            
             try
             {
                 var serv = _FavFile.Root.Descendants("server").Where(x => x.Element("ip").Value == (server.Ip.ToString() + ":" + server.Port)).First();
                 if (serv != null)
                 {
                     serv.Remove();
+                    FavList.Remove(FavList.Where(x => (x.Ip == server.Ip) && (x.Port == server.Port)).FirstOrDefault());
                     return true;
                 }
                 return false;
@@ -111,14 +98,13 @@ namespace SAMP_Ex
                     {
                         FavList.Add(new Server(xel.Element("ip").Value, xel.Element("nickname").Value));
                     }
-                    catch (Exception ex) { }
+                    finally { }
 
                 }
                 return true;
             }
-            catch (Exception ex)
-            {
-                return false;
+            finally
+            { 
             }
         }
 

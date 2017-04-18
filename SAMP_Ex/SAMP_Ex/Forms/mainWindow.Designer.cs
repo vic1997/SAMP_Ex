@@ -79,6 +79,7 @@
             this.grpBox_filters = new System.Windows.Forms.GroupBox();
             this.tableLayout_filterAndServerInfo = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer_main = new System.Windows.Forms.SplitContainer();
+            this.grid_serverList = new SAMP_Ex.ServerList();
             this.splitContainer_serverInfo = new System.Windows.Forms.SplitContainer();
             this.grid_playerList = new System.Windows.Forms.DataGridView();
             this.grid_serverInfo = new System.Windows.Forms.DataGridView();
@@ -89,29 +90,10 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn8 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn10 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn11 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn12 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn13 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn14 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn15 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn16 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn17 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn18 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn19 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn20 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn21 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn22 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.grid_serverList = new SAMP_Ex.ServerList();
-            this.dataGridViewImageColumn23 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.toolStripTxtBox_nickname = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLbl_name = new System.Windows.Forms.ToolStripLabel();
+            this.chckBox_useNicknameDefault = new System.Windows.Forms.CheckBox();
             this.menuStrip_main.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabCtrl_serversLists.SuspendLayout();
@@ -121,13 +103,13 @@
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
             this.splitContainer_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_serverList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_serverInfo)).BeginInit();
             this.splitContainer_serverInfo.Panel1.SuspendLayout();
             this.splitContainer_serverInfo.Panel2.SuspendLayout();
             this.splitContainer_serverInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_playerList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_serverInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_serverList)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip_main
@@ -372,7 +354,7 @@
             this.tab_internet.Location = new System.Drawing.Point(4, 4);
             this.tab_internet.Name = "tab_internet";
             this.tab_internet.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_internet.Size = new System.Drawing.Size(1476, 0);
+            this.tab_internet.Size = new System.Drawing.Size(1276, 0);
             this.tab_internet.TabIndex = 1;
             this.tab_internet.Text = "Internet";
             this.tab_internet.UseVisualStyleBackColor = true;
@@ -383,7 +365,7 @@
             this.tab_hosted.Location = new System.Drawing.Point(4, 4);
             this.tab_hosted.Name = "tab_hosted";
             this.tab_hosted.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_hosted.Size = new System.Drawing.Size(1476, 0);
+            this.tab_hosted.Size = new System.Drawing.Size(1276, 0);
             this.tab_hosted.TabIndex = 2;
             this.tab_hosted.Text = "Hosted";
             this.tab_hosted.UseVisualStyleBackColor = true;
@@ -404,7 +386,10 @@
             this.toolStripBtn_settings,
             this.toolStripSeparator7,
             this.toolStripBtn_sampSite,
-            this.toolStripBtn_about});
+            this.toolStripBtn_about,
+            this.toolStripSeparator9,
+            this.toolStripLbl_name,
+            this.toolStripTxtBox_nickname});
             this.toolStrip_quickBtn.Location = new System.Drawing.Point(0, 24);
             this.toolStrip_quickBtn.Name = "toolStrip_quickBtn";
             this.toolStrip_quickBtn.Size = new System.Drawing.Size(1284, 25);
@@ -419,7 +404,7 @@
             this.toolStripBtn_connect.Name = "toolStripBtn_connect";
             this.toolStripBtn_connect.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_connect.Text = "toolStripBtn_connect";
-            this.toolStripBtn_connect.ToolTipText = "Add server";
+            this.toolStripBtn_connect.ToolTipText = "Connect";
             this.toolStripBtn_connect.Click += new System.EventHandler(this.toolStripBtn_connect_Click);
             // 
             // toolStripSeparator5
@@ -436,7 +421,7 @@
             this.toolStripBtn_addServer.Name = "toolStripBtn_addServer";
             this.toolStripBtn_addServer.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_addServer.Text = "toolStripBtn_addServer";
-            this.toolStripBtn_addServer.ToolTipText = "Connect";
+            this.toolStripBtn_addServer.ToolTipText = "Add server";
             this.toolStripBtn_addServer.Click += new System.EventHandler(this.toolStripBtn_addServer_Click);
             // 
             // toolStripBtn_deleteServer
@@ -448,6 +433,7 @@
             this.toolStripBtn_deleteServer.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_deleteServer.Text = "toolStripBtn_deleteServer";
             this.toolStripBtn_deleteServer.ToolTipText = "Delete server";
+            this.toolStripBtn_deleteServer.Click += new System.EventHandler(this.toolStripBtn_deleteServer_Click);
             // 
             // toolStripBtn_refreshServer
             // 
@@ -584,6 +570,41 @@
             this.splitContainer_main.SplitterDistance = 1017;
             this.splitContainer_main.TabIndex = 10;
             // 
+            // grid_serverList
+            // 
+            this.grid_serverList.AllowUserToAddRows = false;
+            this.grid_serverList.AllowUserToDeleteRows = false;
+            this.grid_serverList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grid_serverList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_serverList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_serverList.BackgroundColor = System.Drawing.Color.White;
+            this.grid_serverList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid_serverList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grid_serverList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_serverList.Location = new System.Drawing.Point(0, 0);
+            this.grid_serverList.LockedImage = global::SAMP_Ex.Properties.Resources.locked_colour;
+            this.grid_serverList.LockHeaderImage = global::SAMP_Ex.Properties.Resources.locked;
+            this.grid_serverList.MultiSelect = false;
+            this.grid_serverList.Name = "grid_serverList";
+            this.grid_serverList.ReadOnly = true;
+            this.grid_serverList.RowHeadersVisible = false;
+            this.grid_serverList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grid_serverList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grid_serverList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid_serverList.ShowEditingIcon = false;
+            this.grid_serverList.Size = new System.Drawing.Size(1017, 455);
+            this.grid_serverList.TabIndex = 1;
+            this.grid_serverList.UnlockedImage = global::SAMP_Ex.Properties.Resources.unlocked_colour;
+            this.grid_serverList.UpdateTimerInterval = 0D;
+            // 
             // splitContainer_serverInfo
             // 
             this.splitContainer_serverInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -655,244 +676,41 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Language";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewImageColumn2
+            // toolStripTxtBox_nickname
             // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.HeaderText = "Locked";
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn2.Width = 20;
+            this.toolStripTxtBox_nickname.Name = "toolStripTxtBox_nickname";
+            this.toolStripTxtBox_nickname.Size = new System.Drawing.Size(150, 25);
             // 
-            // dataGridViewImageColumn3
+            // toolStripSeparator9
             // 
-            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn3.HeaderText = "Locked";
-            this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn3.Width = 20;
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
             // 
-            // dataGridViewImageColumn4
+            // toolStripLbl_name
             // 
-            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn4.HeaderText = "Locked";
-            this.dataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn4.Width = 20;
+            this.toolStripLbl_name.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripLbl_name.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripLbl_name.Name = "toolStripLbl_name";
+            this.toolStripLbl_name.Size = new System.Drawing.Size(61, 22);
+            this.toolStripLbl_name.Text = "Nickname";
             // 
-            // dataGridViewImageColumn5
+            // chckBox_useNicknameDefault
             // 
-            this.dataGridViewImageColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn5.HeaderText = "Locked";
-            this.dataGridViewImageColumn5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn5.Name = "dataGridViewImageColumn5";
-            this.dataGridViewImageColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn5.Width = 20;
-            // 
-            // dataGridViewImageColumn6
-            // 
-            this.dataGridViewImageColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn6.HeaderText = "Locked";
-            this.dataGridViewImageColumn6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
-            this.dataGridViewImageColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn6.Width = 20;
-            // 
-            // dataGridViewImageColumn7
-            // 
-            this.dataGridViewImageColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn7.HeaderText = "Locked";
-            this.dataGridViewImageColumn7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
-            this.dataGridViewImageColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn7.Width = 20;
-            // 
-            // dataGridViewImageColumn8
-            // 
-            this.dataGridViewImageColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn8.HeaderText = "Locked";
-            this.dataGridViewImageColumn8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn8.Name = "dataGridViewImageColumn8";
-            this.dataGridViewImageColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn8.Width = 20;
-            // 
-            // dataGridViewImageColumn9
-            // 
-            this.dataGridViewImageColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn9.HeaderText = "Locked";
-            this.dataGridViewImageColumn9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn9.Name = "dataGridViewImageColumn9";
-            this.dataGridViewImageColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn9.Width = 20;
-            // 
-            // dataGridViewImageColumn10
-            // 
-            this.dataGridViewImageColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn10.HeaderText = "Locked";
-            this.dataGridViewImageColumn10.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn10.Name = "dataGridViewImageColumn10";
-            this.dataGridViewImageColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn10.Width = 20;
-            // 
-            // dataGridViewImageColumn11
-            // 
-            this.dataGridViewImageColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn11.HeaderText = "Locked";
-            this.dataGridViewImageColumn11.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn11.Name = "dataGridViewImageColumn11";
-            this.dataGridViewImageColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn11.Width = 20;
-            // 
-            // dataGridViewImageColumn12
-            // 
-            this.dataGridViewImageColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn12.HeaderText = "Locked";
-            this.dataGridViewImageColumn12.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn12.Name = "dataGridViewImageColumn12";
-            this.dataGridViewImageColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn12.Width = 20;
-            // 
-            // dataGridViewImageColumn13
-            // 
-            this.dataGridViewImageColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn13.HeaderText = "Locked";
-            this.dataGridViewImageColumn13.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn13.Name = "dataGridViewImageColumn13";
-            this.dataGridViewImageColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn13.Width = 20;
-            // 
-            // dataGridViewImageColumn14
-            // 
-            this.dataGridViewImageColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn14.HeaderText = "Locked";
-            this.dataGridViewImageColumn14.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn14.Name = "dataGridViewImageColumn14";
-            this.dataGridViewImageColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn14.Width = 20;
-            // 
-            // dataGridViewImageColumn15
-            // 
-            this.dataGridViewImageColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn15.HeaderText = "Locked";
-            this.dataGridViewImageColumn15.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn15.Name = "dataGridViewImageColumn15";
-            this.dataGridViewImageColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn15.Width = 20;
-            // 
-            // dataGridViewImageColumn16
-            // 
-            this.dataGridViewImageColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn16.HeaderText = "Locked";
-            this.dataGridViewImageColumn16.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn16.Name = "dataGridViewImageColumn16";
-            this.dataGridViewImageColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn16.Width = 20;
-            // 
-            // dataGridViewImageColumn17
-            // 
-            this.dataGridViewImageColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn17.HeaderText = "Locked";
-            this.dataGridViewImageColumn17.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn17.Name = "dataGridViewImageColumn17";
-            this.dataGridViewImageColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn17.Width = 20;
-            // 
-            // dataGridViewImageColumn18
-            // 
-            this.dataGridViewImageColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn18.HeaderText = "Locked";
-            this.dataGridViewImageColumn18.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn18.Name = "dataGridViewImageColumn18";
-            this.dataGridViewImageColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn18.Width = 20;
-            // 
-            // dataGridViewImageColumn19
-            // 
-            this.dataGridViewImageColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn19.HeaderText = "Locked";
-            this.dataGridViewImageColumn19.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn19.Name = "dataGridViewImageColumn19";
-            this.dataGridViewImageColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn19.Width = 20;
-            // 
-            // dataGridViewImageColumn20
-            // 
-            this.dataGridViewImageColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn20.HeaderText = "Locked";
-            this.dataGridViewImageColumn20.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn20.Name = "dataGridViewImageColumn20";
-            this.dataGridViewImageColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn20.Width = 20;
-            // 
-            // dataGridViewImageColumn21
-            // 
-            this.dataGridViewImageColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn21.HeaderText = "Locked";
-            this.dataGridViewImageColumn21.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn21.Name = "dataGridViewImageColumn21";
-            this.dataGridViewImageColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn21.Width = 20;
-            // 
-            // dataGridViewImageColumn22
-            // 
-            this.dataGridViewImageColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn22.HeaderText = "Locked";
-            this.dataGridViewImageColumn22.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn22.Name = "dataGridViewImageColumn22";
-            this.dataGridViewImageColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn22.Width = 20;
-            // 
-            // grid_serverList
-            // 
-            this.grid_serverList.AllowUserToAddRows = false;
-            this.grid_serverList.AllowUserToDeleteRows = false;
-            this.grid_serverList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grid_serverList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid_serverList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grid_serverList.BackgroundColor = System.Drawing.Color.White;
-            this.grid_serverList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid_serverList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grid_serverList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_serverList.Location = new System.Drawing.Point(0, 0);
-            this.grid_serverList.LockedImage = global::SAMP_Ex.Properties.Resources.locked_colour;
-            this.grid_serverList.LockHeaderImage = global::SAMP_Ex.Properties.Resources.locked;
-            this.grid_serverList.MultiSelect = false;
-            this.grid_serverList.Name = "grid_serverList";
-            this.grid_serverList.ReadOnly = true;
-            this.grid_serverList.RowHeadersVisible = false;
-            this.grid_serverList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.grid_serverList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grid_serverList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_serverList.ShowEditingIcon = false;
-            this.grid_serverList.Size = new System.Drawing.Size(1017, 455);
-            this.grid_serverList.TabIndex = 1;
-            this.grid_serverList.UnlockedImage = global::SAMP_Ex.Properties.Resources.unlocked_colour;
-            this.grid_serverList.UpdateTimerInterval = 0D;
-            // 
-            // dataGridViewImageColumn23
-            // 
-            this.dataGridViewImageColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn23.HeaderText = "Locked";
-            this.dataGridViewImageColumn23.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn23.Name = "dataGridViewImageColumn23";
-            this.dataGridViewImageColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn23.Width = 20;
+            this.chckBox_useNicknameDefault.AutoSize = true;
+            this.chckBox_useNicknameDefault.BackColor = System.Drawing.SystemColors.Control;
+            this.chckBox_useNicknameDefault.Location = new System.Drawing.Point(468, 27);
+            this.chckBox_useNicknameDefault.Name = "chckBox_useNicknameDefault";
+            this.chckBox_useNicknameDefault.Size = new System.Drawing.Size(102, 17);
+            this.chckBox_useNicknameDefault.TabIndex = 11;
+            this.chckBox_useNicknameDefault.Text = "Use it by default";
+            this.chckBox_useNicknameDefault.UseVisualStyleBackColor = false;
             // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.Controls.Add(this.chckBox_useNicknameDefault);
             this.Controls.Add(this.splitContainer_main);
             this.Controls.Add(this.tableLayout_filterAndServerInfo);
             this.Controls.Add(this.toolStrip_quickBtn);
@@ -918,13 +736,13 @@
             this.splitContainer_main.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_main)).EndInit();
             this.splitContainer_main.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_serverList)).EndInit();
             this.splitContainer_serverInfo.Panel1.ResumeLayout(false);
             this.splitContainer_serverInfo.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_serverInfo)).EndInit();
             this.splitContainer_serverInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_playerList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_serverInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_serverList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -990,28 +808,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn7;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn8;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn9;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn11;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn12;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn13;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn14;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn15;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn16;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn17;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn18;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn19;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn20;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn21;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn22;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn23;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripLabel toolStripLbl_name;
+        private System.Windows.Forms.ToolStripTextBox toolStripTxtBox_nickname;
+        private System.Windows.Forms.CheckBox chckBox_useNicknameDefault;
     }
 }
 
